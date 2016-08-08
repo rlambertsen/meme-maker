@@ -1,0 +1,93 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-royal">
+        <h1 class="title">Add Caption</h1>
+    </ion-header-bar>
+    <ion-content>
+        <p class="text-center">Please Select all options!</p>
+        <form id="myForm" novalidate>
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" placeholder="Top Text" ng-model="text.top" required>
+                    <span ng-show="!text.top.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input">
+                    <input type="text" placeholder="Bottom Text" ng-model="text.bottom" required>
+                    <span ng-show="!text.bottom.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input item-select h6">
+                    <div class="input-label">
+                        Font Style
+                    </div>
+                    <select name="fontstyle" id="fontstyle" ng-model="font.style" required>
+                        <option selected disabled>Pick a Font Style</option>
+                        <option value="normal">normal</option>
+                        <option value="italic">italic</option>
+                        <option value="oblique">oblique</option>
+                    </select>
+                    <span ng-show="!font.style.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input item-select h6">
+                    <div class="input-label">
+                        Font Weight
+                    </div>
+                    <select name="fontWeight" id="fontWeight" ng-model="font.weight" required>
+                        <option selected disabled>Pick a Font Weight</option>
+                        <option value="normal">normal</option>
+                        <option value="bold">bold</option>
+                        <option value="bolder">bolder</option>
+                        <option value="lighter">lighter</option>
+                    </select>
+                    <span ng-show="!font.weight.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input item-select h6">
+                    <div class="input-label">
+                        Font Face
+                    </div>
+                    <select name="textFont" id="textFont" ng-model="font.face" required>
+                        <option selected disabled>Pick a Font Face</option>
+                        <option value="AmericanTypewriter">American Typewriter</option>
+                        <option value="AppleColorEmoji">Apple Color Emoji</option>
+                        <option value="AvenirNextCondensed-Regular">Avenir Next Condensed-Regular</option>
+                        <option value="Chalkduster">Chalk Duster</option>
+                        <option value="Noteworthy">Noteworthy</option>
+                        <option value="Baskerville">Baskerville</option>
+                        <option value="Superclarendon">Superclarendon</option>
+                        <option value="MarkerFelt-Thin">MarkerFelt-Thin</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="serif">serif</option>
+                        <option value="sans-serif">sans-serif</option>
+                        <option value="cursive">cursive</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="monospace">monospace</option>
+                        <option value="GillSans">Gill Sans</option>
+                        <option value="AppleSDGothicNeo">AppleSDGothicNeo</option>
+                        <option value="Avenir">Avenir</option>
+                    </select>
+                    <span ng-show="!font.face.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input item-select h6">
+                    <div class="input-label">
+                        Font Color
+                    </div>
+                    <select name="fontColor" id="fontColor" ng-model="font.color" required>
+                        <option selected disabled>Pick a Color</option>
+                        <option value="#000">Black</option>
+                        <option value="#FFF">White</option>
+                        <option value="#FF0000">Red</option>
+                        <option value="#0900ff">Blue</option>
+                        <option value="#fdff00">Yellow</option>
+                        <option value="#008000">Green</option>
+                    </select>
+                    <span ng-show="!font.color.length" class="assertive">Required</span>
+                </label>
+                <label class="item item-input">
+                    <input type="number" placeholder="Font Size (100-300)" ng-model="font.size" min="100" max="300"s>
+                    <span ng-show="!font.size.length" class="assertive">Required</span>
+                </label>
+            </div>
+            <button ng-click="draw()" ng-disabled="myForm.$invalid" class="button button-block assertive">Save</button>
+        </form>
+        <button class="button button-block assertive" ng-click="closeModal()">Close</button>
+        <p ng-show="myForm.top.text.$error.required">* Username is required</p>
+    </ion-content>
+</ion-modal-view>

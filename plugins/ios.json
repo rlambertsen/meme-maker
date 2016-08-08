@@ -1,0 +1,40 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.mem.maker"
+        },
+        "org.devgeeks.Canvas2ImagePlugin": {
+            "PACKAGE_NAME": "com.mem.maker"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.mem.maker"
+        }
+    }
+}
